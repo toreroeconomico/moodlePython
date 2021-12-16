@@ -1,0 +1,24 @@
+    # Rellena huecos
+    fLaTeX.write(r"\begin{numerical}{" + nombreCategoria  + r"}" + "\n")
+    fLaTeX.write(corrigeAcentos(r"Lee el enunciado e introduce la respuesta redondeada a las centésimas:" + "\n"))
+    fLaTeX.write(r"" + "\n")    
+    fLaTeX.write(r"" + corrigeAcentos(cadenas[0]) + "\n")
+    fLaTeX.write(r"" + "\n")        
+    fLaTeX.write(r"    \item[tolerance={0.001}] " + str(cadenas[1]) + "\n")
+    fLaTeX.write(r"\end{numerical}"+"\n")    
+
+    # Tipo test
+    fLaTeX.write(r"\begin{multi}{" + nombreCategoria  + r"}" + "\n")
+    fLaTeX.write(corrigeAcentos(r"   Lee el enunciado y elige la opción correcta:" + "\n"))
+    fLaTeX.write(r"" + "\n")    
+    fLaTeX.write(r"" + cadenas[0] + "\n")
+    fLaTeX.write(r"" + "\n")
+    fLaTeX.write(r"        \item* " + str(cadenas[1]) + "\n") # El segundo elemento de cadenas es la respuesta correcta.
+    fLaTeX.write(r"        \item " + str(cadenas[2]) + "\n") # El resto de elementos son los distractores.
+    fLaTeX.write(r"        \item " + str(cadenas[3]) + "\n")
+    fLaTeX.write(r"        \item " + str(cadenas[4]) + "\n")
+    fLaTeX.write(r"    \end{multi}"+"\n")
+    fLaTeX.write(r"\end{multi}" + "\n")
+
+
+
